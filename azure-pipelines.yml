@@ -1,5 +1,3 @@
-Job4 Depends on Job2 and Job3
-
 trigger:
 - master
 
