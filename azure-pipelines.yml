@@ -1,3 +1,7 @@
+Multiple depends 
+
+Job4 Depends on Job2 and Job3
+
 trigger:
 - master
 
@@ -22,4 +26,11 @@ jobs:
   dependsOn: job2
   steps:
   - script: echo Job3
+    displayName: 'Run a one-line script'
+- job: job4
+  dependsOn:
+  - job2
+  - job3
+  steps:
+  - script: echo Job 4
     displayName: 'Run a one-line script'
